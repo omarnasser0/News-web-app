@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News app</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+</head>
+
+<body>
+
+    <nav>
+        <div class="main-nav container flex">
+            <a href="#" onclick="reload()" class="company-logo">
+                <img src="./assets/logo.png" alt="Company Logo">
+            </a>
+            <div class="nav-link">
+                <ul class="flex">
+                    <li class="hover-link nav-item" id="politics" onclick="onNavItemClicked('politics')">Politics</li>
+                    <li class="hover-link nav-item" id="finance" onclick="onNavItemClicked('finance')">Finance</li>
+                    <li class="hover-link nav-item" id="technology" onclick="onNavItemClicked('technology')">Technology
+                    </li>
+                    <li class="hover-link nav-item" id="sports" onclick="onNavItemClicked('sports')">Sports</li>
+                </ul>
+            </div>
+            <div class="search-bar flex">
+                <input type="text" class="news-input" id="news-input" placeholder="e.g. Climate">
+                <button id="search-button" class="search-button" onclick="onSearchButtonClicked()">Search</button>
+                <span class="material-symbols-outlined" onclick="toggleVisibility()">
+                    bookmarks
+                </span>
+            </div>
+
+
+        </div>
+    </nav>
+
+    <main class="relative">
+        <div class="title hidden-div" id="bookmarks-title">
+            <h1>Bookmarks</h1>
+        </div>
+        <div class="sort custom-select select-selected right-top">
+            <!-- <label for="sort"  class="bold">Sort by</label> -->
+            <select id="sort" name="sort" class="bold" size="1" onchange="sort()">
+                <option disabled selected>Sort by</option>
+                <option value="publish-date-up">Publish Date (asc)</option>
+                <option value="publish-date-down">Publish Date (desc)</option>
+                <option value="popularity">Popularity</option>
+                <option value="relevance">Relevance to search input</option>
+            </select>
+        </div>
+        <div class="cards-container container flex" id="cards-container">
+
+        </div>
+        <div class="bookmark-container container flex" id="bookmark-container">
+
+        </div>
+    </main>
+
+    <template id="template-news-card">
+        <div class="card relative">
+            <div class="card-header">
+                <div class="add-bm-div">
+                    <div class="add-bm-bg"></div>
+                    <span class="material-symbols-outlined add-bookmark" onclick="onBookmarked()">
+                        bookmark_add
+                    </span>
+                </div>
+                <img src="https://via.placeholder.com/400x200" alt="news image" id="news-image">
+
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">This is the Title</h3>
+                <h6 id="news-source" class="news-source">End Gooo 08/07/2023 </h6>
+                <p class="news-desc" id="news-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex tempora
+                    reprehenderit velit nostrum, deleniti esse soluta numquam perspiciatis sed expedita perferendis
+                    libero, rerum earum omnis adipisci dolore tenetur quas odio!</p>
+            </div>
+        </div>
+    </template>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

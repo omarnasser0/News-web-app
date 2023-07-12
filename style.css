@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css?family=Cairo%20Play');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-text-color: #222831;
+    --secondary-text-color: #393E46;
+    --accent-color: #EEEEEE;
+    --accent-color-dark: #027e85;
+}
+
+body {
+    font-family: "Cairo", sans-serif;
+    color: var(--primary-text-color);
+}
+
+p {
+    font-family: Verdana, sans-serif;
+    color: var(--primary-text-color);
+    opacity: 80%;
+    line-height: 1.4rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    max-width: 1180px;
+    margin-inline: auto;
+    overflow: hidden;
+}
+
+nav {
+    background-color: var(--accent-color);
+    box-shadow: 0 0 4px #bbe2de;
+    top: 0;
+    z-index: 99;
+    left: 0;
+    right: 0;
+}
+
+.main-nav {
+    justify-content: space-between;
+    padding-block: 8px;
+}
+
+.company-logo img {
+    width: 120px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.nav-link ul {
+    gap: 16px;
+    color: var(--secondary-text-color);
+    font-weight: bold;
+}
+
+li {
+    transition: all 0.3s linear;
+}
+
+.hover-link:hover {
+    /* font-weight: bolder; */
+    cursor: pointer;
+    font-size: larger;
+    color: var(--accent-color-dark);
+}
+
+.hover-link:active {
+    color: red;
+}
+
+.nav-item.active {
+    color: var(--accent-color-dark);
+    border-bottom: 3px solid var(--accent-color-dark);
+
+}
+
+.search-bar {
+    height: 32px;
+    gap: 8px;
+}
+
+.news-input {
+    width: 200px;
+    height: 100%;
+    padding-inline: 12px;
+    border-radius: 4px;
+    /* border: 2px solid var(--accent-color-dark); */
+    border: 2px solid var(--accent-color-dark);
+    font-family: "Cairo Play", sans-serif;
+}
+
+.search-button {
+    font-family: "Cairo Play", sans-serif;
+    background-color: var(--accent-color-dark);
+    color: #EEEEEE;
+    padding: 3px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: var(--secondary-text-color);
+
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 600,
+  'GRAD' 200,
+  'opsz' 48;
+  padding-left: 3rem;
+  padding-right: 0.5rem;
+  scale: 130%;
+  color: var(--primary-text-color);
+  cursor: pointer;
+}
+
+
+main {
+    color: var(--accent-color-dark);
+    padding-block: 20px;
+    margin-top: 80px;
+    position: relative;
+}
+
+.cards-container {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    align-items: start;
+}
+
+.card {
+    width: 360px;
+    min-height: 480px;
+    box-shadow: 0 0 4px #bbe2de;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #fff;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 1px 1px 8px var(--accent-color);
+    background-color: #f9fdff;
+    transform: translateY(-2px);
+}
+/* 
+.card-header {
+    position: relative;
+} */
+
+
+.card-header img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 12px;
+}
+
+.bookmark {
+    justify-content: center;
+}
+
+.card-bookmark{
+    /* width: 100%;
+    height: 40px;
+    box-shadow: 0 0 4px #bbe2de;
+    border-radius:0 0 0 4px;
+    cursor: pointer;
+    background-color: #fff;
+    overflow: hidden;
+    transition: all 0.3s ease; */
+    position: absolute; 
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 2;
+    background-color: var(--primary-text-color);
+}
+
+.card-bookmark-background {
+    position: absolute;
+    bottom: 22.5px;
+    right: 16px;
+    width: 35px;
+    height: 35px;
+    z-index: 1;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.hidden-div {
+    display: none;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 5rem;
+    margin-top: -2rem;
+}
+
+.news-source {
+    margin-block: 12px;
+
+}
+
+.custom-select {
+    /*  right: 100px; */
+    top: -50px; 
+    position: absolute;
+    padding-right: 100px;
+    padding-bottom: 100px;
+}
+.custom-select select {
+    border-style: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='%23222831' d='M0 0l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 20px; /* Adjust the padding as needed */
+    width: fit-content;
+      
+}
+
+/* .flex-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+} */
+
+.right-top {
+    position: absolute;
+    right: 20px;
+}
+
+select {
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    -ms-appearance:none;
+    appearance:none;
+    outline:0;
+    box-shadow:none;
+    border:0!important;
+    background-image: none;
+    flex: 1;
+    padding: 0 .5em;
+    cursor:pointer;
+    font-size: 1em;
+    color: var(--accent-color-dark);
+    font-family: 'Cairo';
+    background-color: transparent;
+ }
+ select::-ms-expand {
+    display: none;
+ }
+ .select {
+    position: relative;
+    display: flex;
+    width: 20em;
+    height: 3em;
+    line-height: 3;
+    overflow: hidden;
+    border-radius: .25em;
+    background-color: transparent;
+ }
+ .custom-select::after {
+    /* content: '\f0da'; */
+    position: absolute;
+    /* top: 0;
+    right: 0; */
+    /* padding: 0 1em; */
+    cursor:pointer;
+    pointer-events:none;
+    transition:.25s all ease;
+ }
+ .select:hover::after {
+    color: #23b499;
+ }
+
+ .bold {
+    font-weight: bold;
+ }
+
+ .add-bookmark {
+    position: absolute;
+    right: 2.5%;
+    top: 2.5%;
+ }
+
+ .relative {
+    position: relative;
+ }
+
+ .add-bm-bg {
+    background-color: var(--accent-color);
+    width: 50px;
+    height: 50px;
+    right: 0;
+    top: 0;
+    border-bottom-left-radius: 10px;  
+    position: absolute;
+ }
